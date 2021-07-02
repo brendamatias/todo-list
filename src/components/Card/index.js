@@ -30,14 +30,9 @@ export default function Card({ data, index, taskIndex }) {
     hover(item, monitor) {
       const draggedTaskIndex = item.taskIndex;
       const targetTaskIndex = taskIndex;
+
       const draggedIndex = item.index;
       const targetIndex = index;
-
-      const targetSize = ref.current.getBoundingClientRect();
-      const targetCenter = (targetSize.bottom - targetSize.top) / 2;
-
-      const draggedOffset = monitor.getClientOffset();
-      const draggedTop = draggedOffset.y - targetSize.top;
 
       if (
         draggedIndex === targetIndex &&
@@ -45,6 +40,12 @@ export default function Card({ data, index, taskIndex }) {
       ) {
         return;
       }
+
+      const targetSize = ref.current.getBoundingClientRect();
+      const targetCenter = (targetSize.bottom - targetSize.top) / 2;
+
+      const draggedOffset = monitor.getClientOffset();
+      const draggedTop = draggedOffset.y - targetSize.top;
 
       if (
         (draggedIndex < targetIndex && draggedTop < targetCenter) ||
