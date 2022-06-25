@@ -97,7 +97,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## :computer: API
 
-- Aplicação Backend disponível em: <a href="http://git.vibbra.com.br/brenda-1624633177/todo-list-api.git">API</a>
+- Aplicação Backend disponível em: <a href="https://github.com/brendamatias/todo-list-api">API</a>
 
 ---
 
